@@ -12,6 +12,7 @@ using WindowsFormsApp1.Extensions;
 using System.IO;
 using System.Xml.Linq;
 using System.Xml.Serialization;
+
 namespace WindowsFormsApp1
 {
     public partial class CreateMeeting : Form
@@ -47,7 +48,6 @@ namespace WindowsFormsApp1
             var fileName = $"{newMeet.SecretKey}.txt";
             using (StreamWriter writer = new StreamWriter(fileName))
             {
-                // Sınıfı XML olarak serileştir
                 XmlSerializer serializer = new XmlSerializer(typeof(MeetingModel));
                 serializer.Serialize(writer, newMeet);
             }

@@ -5,6 +5,7 @@ using System.Data;
 using System.Drawing;
 using System.IO;
 using System.Linq;
+using System.Net.Sockets;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -47,6 +48,7 @@ namespace WindowsFormsApp1
 
         private void uploadMeeting()
         {
+
             var filePath = $"{_secretKey}.txt";
             using (StreamReader reader = new StreamReader(filePath))
             {
@@ -57,6 +59,7 @@ namespace WindowsFormsApp1
                 txtContent.Text = _meetingModel.Content;
                 txtTopic.Text = _meetingModel.Topic;
                 lbSelectedDates.Items.AddRange(_meetingModel.Dates.ToArray());
+                lbMessage.Text = String.IsNullOrEmpty(_meetingModel.DecidedDate) ? "Toplantı tarihi belirlenmemiştir." : $"Toplantı tarihi belirlenmiştir --> {_meetingModel.DecidedDate} ";
             }
         }
 

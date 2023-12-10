@@ -52,6 +52,7 @@ namespace WindowsFormsApp1
                     this.Close();
                 }
                 txtTopic.Text = _meetingModel.Topic;
+                lbMessage.Text = String.IsNullOrEmpty(_meetingModel.DecidedDate) ? "Toplantı tarihi belirlenmemiştir." : $"Toplantı tarihi belirlenmiştir --> {_meetingModel.DecidedDate} ";
                 lbSelectedDates.Items.AddRange(_meetingModel.MeetingParticipants.Select(x=> x.FullName + " - " + x.Date).ToArray());
             }
         }

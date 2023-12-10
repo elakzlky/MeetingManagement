@@ -32,6 +32,7 @@
             this.txtTopic = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
             this.lbSelectedDates = new System.Windows.Forms.ListBox();
+            this.lbMessage = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label3
@@ -55,7 +56,7 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(43, 258);
+            this.button1.Location = new System.Drawing.Point(43, 280);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(471, 81);
             this.button1.TabIndex = 19;
@@ -72,11 +73,22 @@
             this.lbSelectedDates.Size = new System.Drawing.Size(471, 116);
             this.lbSelectedDates.TabIndex = 18;
             // 
+            // lbMessage
+            // 
+            this.lbMessage.AutoSize = true;
+            this.lbMessage.ForeColor = System.Drawing.Color.Red;
+            this.lbMessage.Location = new System.Drawing.Point(40, 233);
+            this.lbMessage.Name = "lbMessage";
+            this.lbMessage.Size = new System.Drawing.Size(44, 16);
+            this.lbMessage.TabIndex = 20;
+            this.lbMessage.Text = "label1";
+            // 
             // Admin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(581, 424);
+            this.ClientSize = new System.Drawing.Size(581, 405);
+            this.Controls.Add(this.lbMessage);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.lbSelectedDates);
             this.Controls.Add(this.label3);
@@ -85,6 +97,7 @@
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "Admin";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Admin";
             this.Load += new System.EventHandler(this.Admin_Load);
             this.ResumeLayout(false);
@@ -98,5 +111,6 @@
         private System.Windows.Forms.TextBox txtTopic;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.ListBox lbSelectedDates;
+        private System.Windows.Forms.Label lbMessage;
     }
 }
