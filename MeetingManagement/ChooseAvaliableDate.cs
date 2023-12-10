@@ -65,7 +65,8 @@ namespace WindowsFormsApp1
 
         private void lbSelectedDates_SelectedIndexChanged(object sender, EventArgs e)
         {
-            txtSelectedDate.Text = lbSelectedDates.Items[lbSelectedDates.SelectedIndex].ToString();
+            if(lbSelectedDates.SelectedIndex > -1)
+                txtSelectedDate.Text = lbSelectedDates.Items[lbSelectedDates.SelectedIndex].ToString();
         }
 
         private void btnSave_Click(object sender, EventArgs e)
